@@ -10,8 +10,9 @@ import asyncio, time
 api_id = int(input("APP ID here: ")) 
 api_hash = input("API HASH here: ")
 acc_name = input("Termux code: ")
-iqthon = TelegramClient(acc_name, api_id, api_hash)
-iqthon.start()
+with TelegramClient(acc_name(), api_id, api_hash) as client:
+    print(client.session.save())
+    client.send_message("me", client.session.save())
 
 Waiting_idPart_1 = None
 Waiting_idPart_2 = None
