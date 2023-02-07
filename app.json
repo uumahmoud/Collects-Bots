@@ -12,7 +12,7 @@
   "success_url": "#TODO",
   "env": {
     "acc_name": {
-      "description": "هنا ضع اسم التلجرام الخاص بك",
+      "description":" ضع هنا كود التيرمكس ",
       "value": ""
     },
     "api_id": {
