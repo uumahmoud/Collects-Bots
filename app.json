@@ -31,14 +31,6 @@
       "description": "لا تغير هذه القيمه",
       "value": "."
     },
-    "STRING_SESSION": {
-      "description": "هنا ضع كود سيشن تيليثون او بايروجرام كود تيرمكس الخاص بك",
-      "value": ""
-    },
-    "TG_BOT_TOKEN": {
-      "description": "هنا ضع توكن بوتك الذي صنعته",
-      "value": ""
-    },
     "HEROKU_API_KEY": {
       "description": "هنا ضع الايبي كي الخاص بحساب هيروكو من هذا الرابط https://dashboard.heroku.com/account",
       "value": "",
