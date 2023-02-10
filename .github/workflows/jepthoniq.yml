@@ -1,4 +1,4 @@
-name: jepthoniq
+name: uumahmoud
 
 on:
     push:
@@ -17,7 +17,7 @@ jobs:
          with:
             all_but_latest: true
             access_token: ${{ github.token }}
-       - name: initialization jepthoniq
+       - name: initialization uumahmoud
          continue-on-error: true
          run: |
            git config --global user.name ${{ secrets.GIT_NAME }}
@@ -27,20 +27,20 @@ jobs:
        - name: cloning repository
          continue-on-error: true
          run: |
-           git clone https://${{ secrets.GIT_NAME }}:${{ secrets.GIT_TOKEN }}@${{ secrets.BOT_REPO }} jepthoniq
-       - name: running jepthoniq server
+           git clone https://${{ secrets.GIT_NAME }}:${{ secrets.GIT_TOKEN }}@${{ secrets.BOT_REPO }} uumahmoud
+       - name: running uumahmoud server
          timeout-minutes: 350
          continue-on-error: true
          run: |
-           cd jepthoniq
-           docker build . -t jepthoniq
-           docker run jepthoniq
-       - name: loop jepthoniq server
+           cd uumahmoud
+           docker build . -t uumahmoud
+           docker run uumahmoud
+       - name: loop uumahmoud server
          continue-on-error: true
          run: |
               git clone https://github.com/${GITHUB_REPOSITORY} loop
               cd loop || exit 1
               echo $(date -u +%T%P) >> loop.txt
               git add loop.txt
-              git commit -m "jepthoniq : Loop $(date -u +%D-%T%P)"
-              git push -q https://${{ secrets.GIT_TOKEN }}@github.com/${GITHUB_REPOSITORY} HEAD:jepthoniq
+              git commit -m "uumahmoud : Loop $(date -u +%D-%T%P)"
+              git push -q https://${{ secrets.GIT_TOKEN }}@github.com/${GITHUB_REPOSITORY} HEAD:uumahmoud
