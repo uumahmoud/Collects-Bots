@@ -1,7 +1,7 @@
-FROM jepthoniq/jepthon:slim-buster
+FROM uumahmoud/Collects-Bots:slim-buster
 
 #clonning repo 
-RUN git clone https://github.com/jepthoniq/jepthon /root/jepthon
+RUN git clone https://github.com/uumahmoud/Collects-Bots /root/Collects-Bots
 #working directory 
 WORKDIR /root/jepthon
 RUN apk add --update --no-cache p7zip
